@@ -214,6 +214,7 @@ class Dilations(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
+        # 第一种self-attention，已经注释
         # # print(x.shape,'1')
         # x1 = self.patch_embed(x)#[16, 196, 768]
         # # print(x1.shape,'2')
@@ -228,7 +229,7 @@ class Dilations(nn.Module):
         # x1 = self.head(cls_token_final)#[16, 1024]
         # # print(x1.shape,'6')
         # # x1 = relu(x1)
-
+        
         x = self.conv1(x)#[16, 3, 224, 224] [16, 64, 112, 112]
         x = self.bn1(x)#[16, 3, 224, 224] [16, 64, 112, 112]
         x = self.relu(x)#[16, 3, 224, 224] [16, 64, 112, 112]
@@ -236,6 +237,7 @@ class Dilations(nn.Module):
         # pdb.set_trace()
         x = self.layer1(x)#[16, 256, 56, 56]
         x = self.layer2(x)#[16, 512, 28, 28]
+        # 第二种self-attention，两种用法类似，可以替换
         out,attention_map = self.Atten(x)# [16,784,784]
         cls_token_final = attention_map[:, 0]
         x1 = self.head(cls_token_final)#[16, 1024]
