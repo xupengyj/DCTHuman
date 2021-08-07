@@ -1,6 +1,7 @@
 # DCTHuman-DANet
-This is person notes
-The main datasets are Human3.6M, UP3D, 3DPW
+This is person notes：
+
+The main datasets are Human3.6M, UP3D, 3DPW.
 
 The picture below shows our demo：
 
