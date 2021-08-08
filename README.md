@@ -1,4 +1,4 @@
-# DCTHuman-DANet
+# DCTHuman-LAMNet
 This is person notes：
 
 The main datasets are Human3.6M, UP3D, 3DPW.
