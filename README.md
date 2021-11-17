@@ -1,4 +1,6 @@
 # DCTHuman-LAMNet
+### 《Learning Attention Map for 3D Human Recovery from a Single RGB Image》
+### BMVC2021 Oral
 This is person notes：
 
 The main datasets are Human3.6M, UP3D, 3DPW.
